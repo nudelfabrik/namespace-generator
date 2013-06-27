@@ -22,3 +22,8 @@ then
     echo "No File loaded! Use $0 -i \$namespace"
     exit 1
 fi
+
+entries=`wc -l $File | awk {'print $1'}`
+rnd=$(( $RANDOM % entries + 1 ))
+
+
