@@ -8,12 +8,14 @@ case $1 in
         if [[ -f $location/$2 ]]
         then
             cp $location/$2 $File 
+                exit 0
         else
             echo "File not found! Use $0 -l"
             exit 2
         fi ;;
     -l)
-        ls $location ;;
+        ls $location 
+            exit 0 ;;
     -d) 
         delete=1 ;;
 esac
