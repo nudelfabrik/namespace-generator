@@ -1,7 +1,7 @@
 #!/bin/bash
 File="namespace"
 location="namespaces"
-
+delete=0
 case $1 in
     -i)
         if [[ -f $location/$2 ]]
@@ -12,7 +12,9 @@ case $1 in
             exit 2
         fi ;;
     -l)
-        ls $location
+        ls $location ;;
+    -d) 
+        delete=1 ;;
 esac
 
 if [[ !( -f $File )]] 
