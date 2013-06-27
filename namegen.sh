@@ -1,6 +1,7 @@
 #!/bin/bash
 File="namespace"
 location="namespaces"
+
 delete=0
 case $1 in
     -i)
@@ -25,5 +26,10 @@ fi
 
 entries=`wc -l $File | awk {'print $1'}`
 rnd=$(( $RANDOM % entries + 1 ))
+name=`awk -v n=$rnd 'NR ==n' $File`
 
-
+echo $name
+if [[ delete -eq 1 ]]
+then
+    sed "$rnd d;" $File > $File
+fi
