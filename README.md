@@ -14,3 +14,7 @@ Usage
 <code>./namegen.sh -l</code> list all available Namespaces
 <code>./namegen.sh -i $namespace</code> import a Namespace file from namespaces/
 <code>./namegen.sh -d</code> delete the word from the namespace file (the namespaces in namespaces/ stay unaltered, namegen.sh works with ./namespace)
+
+Legal
+-----
+Lists are generated from various wikis, the appropiate Licenses are referenced in every List. 

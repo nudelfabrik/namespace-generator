@@ -29,6 +29,11 @@ fi
 entries=`wc -l $File | awk {'print $1'}`
 rnd=$(( $RANDOM % entries + 1 ))
 name=`awk -v n=$rnd 'NR ==n' $File`
+if [[ -z `echo $name | grep -v "^#"` ]]
+then
+    name=`awk -v n=$rnd 'NR ==(n+1)' $File`
+fi
+
 
 echo $name
 if [[ delete -eq 1 ]]
