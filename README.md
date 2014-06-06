@@ -17,4 +17,5 @@ Usage
 
 Legal
 -----
-Lists are generated from various wikis, the appropiate Licenses are referenced in every List. 
+The lists of names are generated from various wikis, the appropiate Licenses are referenced in every List. 
+The rest is available under [http://www.gnu.org/licenses/gpl-2.0.txt](GPL License) and should comply with the respective Licenses from every list.
